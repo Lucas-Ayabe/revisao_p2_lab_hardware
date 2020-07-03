@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Revisão para P2 - Laboratório de hardware</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                font-size: 16px;
+            }
+
+            @media screen and (min-width: 1400px) {
+                :root {
+                    font-size: 1.125vw;
+                }
+            }
+
+            @media screen and (min-width: 1700px) {
+                :root {
+                    font-size: 1.25vw;
+                }
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            html,
+            body {
+                font-family: "Open Sans", sans-serif;
+            }
+
+            b,
+            strong {
+                font-weight: 700;
+            }
+
+            .container {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            @media screen and (min-width: 768px) {
+                .container {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    max-width: 756px;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                .container {
+                    max-width: 960px;
+                }
+            }
+
+            @media screen and (min-width: 1400px) {
+                .container {
+                    max-width: 1140px;
+                }
+            }
+
+            @media screen and (min-width: 1700px) {
+                .container {
+                    max-width: 1400px;
+                }
+            }
+
+            .section {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            .subsection + .subsection {
+                padding-top: 1.5em;
+                margin-top: 1.5em;
+                border-top: 1px solid #ccc;
+            }
+
+            .flow > * + * {
+                margin-top: 1em;
+            }
+
+            .half-flow > * + * {
+                margin-top: 0.5em;
+            }
+
+            .card {
+                border-radius: 6px;
+            }
+
+            @media screen and (min-width: 768px) {
+                .card {
+                    border: 1px solid #ccc;
+                    padding: 25px;
+                }
+            }
+
+            .card-title {
+                font-size: 1.125rem;
+                font-weight: 700;
+            }
+
+            .card p {
+                font-size: 1.0625rem;
+                line-height: 1.5;
+            }
+
+            .title {
+                font-size: 1.5rem;
+                font-weight: 600;
+                line-height: 1.2;
+            }
+
+            .title.lg {
+                font-family: "Playfair Display", serif;
+                font-weight: 400;
+                font-size: 2.875rem;
+            }
+
+            .title.sm {
+                font-size: 1.25rem;
+                font-weight: 700;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+                font-weight: 600;
+                margin-top: 1.5em;
+                text-transform: uppercase;
+            }
+
+            @media screen and (min-width: 568px) {
+                .card-title {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                }
+                .title {
+                    font-size: 2rem;
+                }
+
+                .title.lg {
+                    font-size: 3.5rem;
+                }
+            }
+
+            .list {
+                padding-left: 2.25ch;
+            }
+
+            ol.list {
+                padding-left: 1.9ch;
+            }
+
+            .list li + li {
+                margin-top: 0.35rem;
+            }
+
+            .table-wrapper {
+                display: block;
+                max-width: 100%;
+                overflow-x: auto;
+                box-shadow: inset -4px 0 8px rgba(120, 120, 120, 0.2),
+                    inset 4px 0 8px rgba(120, 120, 120, 0.2);
+            }
+
+            @media screen and (min-width: 450px) {
+                .table-wrapper {
+                    box-shadow: 0 0 0 0 transparent;
+                }
+            }
+
+            .table {
+                border-collapse: collapse;
+            }
+
+            .table th {
+                text-align: left;
+                text-transform: uppercase;
+                padding: 10px;
+                color: rgb(13, 119, 206);
+            }
+
+            .table tr {
+                border-bottom: 1px solid #ccc;
+            }
+
+            .table tbody tr:nth-child(odd) {
+                background: rgba(0, 80, 80, 0.03);
+            }
+
+            .table td {
+                padding: 20px 10px;
+            }
+
+            .table td:first-of-type {
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="section container">
+            <h1 class="title lg">
+                Revisão para P2 de<br />
+                laboratório de hardware
+            </h1>
+        </header>
+        <article class="container flow">
+            <section id="questions" class="section flow">
+                <h2 class="title">Questões</h2>
+
+                <article id="question-01" class="section flow card">
+                    <h2 class="card-title">
+                        1. Resolver uma rodada completa (Construir o computador
+                        todo) do simulador de defeitos. (Recomendado fazer 2 ou
+                        3 rodadas completas)
+                    </h2>
+                    <p>
+                        Bem como este item não é bem uma pergunta então em breve
+                        colocarei um mini-detonado do simulador.
+                    </p>
+                </article>
+
+                <article id="question-02" class="section flow card">
+                    <h2 class="card-title">
+                        2. Explique BIOS com suas palavras
+                    </h2>
+
+                    <p>
+                        Sigla que significa "Basic Input/Output System", a BIOS
+                        é um <b>chip minúsculo</b> localizada normalmente nas
+                        bordas da placa-mãe e é a primeira coisa que começa a
+                        funcionar quando se liga o computador. A primeira etapa
+                        é a leitura das informações contidas no CMOS
+                        (Complementary Metal-Oxide-Semiconductor) com as
+                        configurações personalizadas pelo usuário no SETUP.
+                    </p>
+
+                    <p>
+                        O BIOS é a
+                        <b>primeira camada de software do sistema</b>, um
+                        pequeno programa encarregado de
+                        <b>reconhecer o hardware</b>, realizar o <b>boot</b>, e
+                        prover informações básicas para o funcionamento do
+                        sistema. O BIOS é personalizado para cada modelo de
+                        placa mãe, não funcionando em nenhum outro.
+                    </p>
+                </article>
+
+                <article id="question-03" class="section flow card">
+                    <h2 class="card-title">
+                        3. Explique CMOS com suas palavras
+                    </h2>
+
+                    <p>
+                        CMOS é a abreviação de "Complementary Metal Oxide
+                        Semiconductor". O CMOS é uma <b>pequena</b> área de
+                        <b>memória volátil</b>, alimentada por uma bateria, que
+                        é usada para
+                        <strong>gravar as configurações do Setup</strong> da
+                        placa mãe.
+                    </p>
+
+                    <p>
+                        Nos primeiros PC's todas as configurações acerca do
+                        hardware instalado, e demais configurações de
+                        inicialização do sistema, eram configurados através de
+                        <strong>jumpers</strong>, o que era um trabalho de certa
+                        forma complicado.
+                    </p>
+
+                    <p>
+                        Para facilitar essas tarefas, foi criado o
+                        <strong>Setup</strong>, que permite configurar
+                        facilmente o sistema.
+                    </p>
+
+                    <p>
+                        E o local onde as configurações desse Setup ficam
+                        armazenados é em uma pequena memória Ram de cerca de 128
+                        bytes, chamada de CMOS.
+                    </p>
+                </article>
+
+                <article id="question-04" class="section flow card">
+                    <h2 class="card-title">
+                        4. Explique SETUP da BIOS com suas palavras
+                    </h2>
+
+                    <p>
+                        É um programa que nos permite configurar:
+                    </p>
+
+                    <ul class="list">
+                        <li>
+                            Várias opções acerca do hardware instalado;
+                        </li>
+
+                        <li>
+                            Opções relacionadas ao desempenho do sistema;
+                        </li>
+
+                        <li>
+                            senhas e etc;
+                        </li>
+                    </ul>
+
+                    <p>
+                        As configurações do setup são essenciais para o
+                        funcionamento e bom desempenho do sistema, uma
+                        configuração rápida do setup pode tornar o sistema até
+                        70% mais lento.
+                    </p>
+                </article>
+
+                <article id="question-05" class="section flow card">
+                    <h2 class="card-title">
+                        5. Explique a atualização da BIOS, como ela ocorre é
+                        porque é uma transação crítica
+                    </h2>
+
+                    <p>
+                        A BIOS é um programa que fica armazenado em chips de
+                        memória Flash Ram. O uso deste tipo de memória visa
+                        permitir que a BIOS seja modificada. A essa modificação
+                        damos o nome de upgrade ou <b>atualização de BIOS</b>.
+                    </p>
+
+                    <p>
+                        Com o passar do tempo, novas técnologias vão surgindo
+                        tais como portas USB, barramente AGP e etc.
+                        <b>A função</b> do upgrade de BIOS é
+                        <b>tornar o micro compatível com estes novos recursos</b
+                        >.
+                    </p>
+
+                    <p>
+                        É uma operação extremamente <strong>perigosa</strong>,
+                        pois ela consiste em:
+                    </p>
+
+                    <ol class="list">
+                        <li>
+                            Baixar o programa de gravação dos dados e arquivo
+                            binário com o upgrade;
+                        </li>
+                        <li>Apagar os dados atuais da BIOS;</li>
+                        <li>Sobreescreve-los;</li>
+                    </ol>
+
+                    <p>
+                        Este processo demora um pouco, cerca de alguns minutos e
+                        é isso que o torna tão <b>crítico</b>, afinal caso falte
+                        energia, se esbarre no botão de reset ou qualquer outro
+                        imprevisto que posso interromper o processo de
+                        atualização, a BIOS <strong>não funcionará</strong> mais
+                        e a placa mãe será <strong>inutilizada</strong>. Quando
+                        isso acontece, chamamos de brick ou dizemos que a BIOS
+                        está brickada.
+                    </p>
+                </article>
+
+                <article id="question-06" class="section flow card">
+                    <h2 class="card-title">
+                        6. Explique as sequências de BEEPS das BIOS AWARD
+                    </h2>
+
+                    <div class="table-wrapper">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Bips</th>
+                                    <th>Problema</th>
+                                    <th>Solução</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1 longo, 2 curtos</td>
+                                    <td>Erro de adaptador de vídeo</td>
+                                    <td>
+                                        O adaptador de vídeo está com defeito ou
+                                        não está encaixado corretamente. Além
+                                        disso, verifique para garantir que o
+                                        cabo do monitor está conectado
+                                        corretamente.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Repetindo(loop infinito)</td>
+                                    <td>Erro de memória</td>
+                                    <td>
+                                        Verifique se a memória foi encaixada
+                                        corretamente ou se ela está faltando.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>1 longo, 3 curtos</td>
+                                    <td>
+                                        Sem placa de vídeo ou má memória RAM de
+                                        vídeo.
+                                    </td>
+                                    <td>
+                                        Redefina ou troque a placa de vídeo.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Bips de alta frequencia enquanto rodando
+                                    </td>
+                                    <td>CPU super-aquecida</td>
+                                    <td>
+                                        Verifique se a ventoinha está
+                                        funcionando ou se o computador está
+                                        ventilando corretamente.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Repetindo alto/baixo</td>
+                                    <td>CPU</td>
+                                    <td>
+                                        A CPU não está encaixada corretamente ou
+                                        a CPU está danificada. Também pode ser
+                                        devido ao excesso de calor. Verifique as
+                                        configurações da ventoinha ou BIOS para
+                                        a velocidade adequada da ventoinha.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article id="question-07" class="section flow card">
+                    <h2 class="card-title">
+                        7. Explique qual provável problema que não se encaixa
+                        nos padrões citados na questão 6.
+                    </h2>
+
+                    <p>Problemas relacionados diretamente com a placa-mãe.</p>
+                </article>
+
+                <article id="question-08" class="section flow card">
+                    <h2 class="card-title">
+                        8. Porque é possível detectar um malware mesmo sem
+                        conhece-lo?
+                    </h2>
+
+                    <p>
+                        É possível detectar um malware através da percepção de
+                        que o computador, não está funcionando como o esperado,
+                        apresentando sinais de infecção como pop-ups aparecendo
+                        aleatóriamente, programas "novos" desconhecidos,
+                        anuncios suspeitos ao navegar na internet, conexão mais
+                        lenta que o normal e etc.
+                    </p>
+                </article>
+
+                <article id="question-09" class="section flow card">
+                    <h2 class="card-title">
+                        9. Explique os principais tipos de malware
+                    </h2>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">Vírus</h2>
+                        <p>
+                            Programas maliciosos que se multiplicam contaminando
+                            arquivos, registros de inicialização e tabelas de
+                            partição dos discos.
+                        </p>
+
+                        <p>
+                            Para que o vírus seja ativado, é preciso abrir um
+                            arquivo contaminado ou inicializar o sistema com um
+                            disco contamindo.
+                        </p>
+
+                        <h3 class="subtitle">Solução</h3>
+                        <p>Programas antivírus, detectam e eliminam vírus.</p>
+                    </section>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">Cavalos de troia (Trojans)</h2>
+                        <p>
+                            São programas maliciosos que geralmente causam o
+                            mesmo tipo de problema que os vírus porém não se
+                            multiplicam, apenas tem alguma função nociva
+                            predeterminada.
+                        </p>
+
+                        <h3 class="subtitle">Solução</h3>
+                        <p>
+                            Os programas anti-vírus também combatem os trojans
+                            porém para uma maior proteçam é indicado utilizar um
+                            programa específico, o antitrojan, que geralmente
+                            detecta e remove uma quantidade maior de cavalos de
+                            tróia que os antívirus
+                        </p>
+                    </section>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">Worms</h2>
+                        <p>
+                            São como vírus mas se multiplicam automaticamente,
+                            geralmente exploram falhas de segurança em programas
+                            de gerenciamento de e-mails para se auto executarem
+                            e se espalharem rápidamente causando sérios
+                            prejuízos a nível mundial.
+                        </p>
+
+                        <h3 class="subtitle">Solução</h3>
+                        <p>
+                            Programas antivírus e correções de segurança
+                            (patches) fornecidos pelos desenvolvedores dos
+                            sistemas operacionais e programas.
+                        </p>
+                    </section>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">Spywares</h2>
+                        <p>
+                            São um tipo relativamente novo de malware utilizados
+                            por empresas de marketing para fazer propagandas
+                            abusivas e coletar dados sobre os usuários, seus
+                            hábitos de navegação e etc.
+                        </p>
+
+                        <p>
+                            Os Spywares geralmente são obtidos através de
+                            determinados programas (em geral os que exibem
+                            anúncios comerciais) através de scripts e plugins em
+                            páginas de internet.
+                        </p>
+
+                        <h3 class="subtitle">Solução</h3>
+                        <p>
+                            Programas anti-spyware que detectam e removem os
+                            spywares e alguns também impedem a instalação dos
+                            mesmos através de diversos métodos.
+                        </p>
+                    </section>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">Backdoor</h2>
+                        <p>
+                            É um método não documentado de acesso a sistemas, de
+                            maneira remota, permitindo que como o nome sugere,
+                            sirva de "porta dos fundos" para que um malware
+                            adentre no sistema e ai possa causar estragos reais
+                            ao sistema, usualmente trojans.
+                        </p>
+
+                        <p>
+                            Embora tenham esses usos ruins, também podem ser
+                            usados de forma legítima por fabricantes para
+                            restaurar acessos.
+                        </p>
+
+                        <h3 class="subtitle">Solução</h3>
+                        <p>
+                            Deixar habilitado o firewall, além de mante-lo bem
+                            configurado. Usar um sistema de prevenção contra
+                            intrusos e um anti-malware pode ajudar também.
+                        </p>
+                    </section>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">Ransomware</h2>
+                        <p>
+                            Ransomware é um tipo de código malicioso que torna
+                            inacessíveis os dados armazenados em um equipamento,
+                            geralmente usando criptografia, e que exige
+                            pagamento de resgate (ransom) para restabelecer o
+                            acesso ao usuário.
+                        </p>
+
+                        <p>
+                            O pagamento do resgate geralmente é feito via
+                            bitcoins.
+                        </p>
+
+                        <p>
+                            Eles podem se propagar das mais diversas formas, mas
+                            as mais comuns são:
+                        </p>
+
+                        <ul class="list">
+                            <li>
+                                através de e‐mails com o código malicioso em
+                                anexo ou que induzam o usuário a seguir um link;
+                            </li>
+
+                            <li>
+                                explorando vulnerabilidades em sistemas que não
+                                tenham recebido as devidas atualizações de
+                                segurança.
+                            </li>
+                        </ul>
+
+                        <p>Existem dois tipos de ransomware:</p>
+
+                        <ul class="list">
+                            <li>
+                                <em>Ransomware Locker</em>: impede que você
+                                acesse o equipamento infectado.
+                            </li>
+
+                            <li>
+                                <em>Ransomware Crypto</em>: impede que você
+                                acesse aos dados armazenados no equipamento
+                                infectado, geralmente usando criptografia.
+                            </li>
+                        </ul>
+
+                        <p>
+                            Além de infectar o equipamento o ransomware também
+                            costuma buscar outros dispositivos conectados,
+                            locais ou em rede, e criptografá‐los também
+                        </p>
+
+                        <h3 class="subtitle">Solução</h3>
+                        <p>
+                            Para se proteger de ransomware você deve tomar os
+                            mesmos cuidados que toma para evitar os outros
+                            códigos maliciosos, como:
+                        </p>
+
+                        <ul class="list">
+                            <li>
+                                manter o sistema operacional e os programas
+                                instalados com todas as atualizações aplicadas;
+                            </li>
+                            <li>ter um antivírus instalado;</li>
+                            <li>
+                                ser cuidadoso ao clicar em links ou abrir
+                                arquivos.
+                            </li>
+                        </ul>
+
+                        <p>
+                            Fazer backups regularmente também é essencial para
+                            proteger os seus dados pois, se seu equipamento for
+                            infectado, a única garantia de que você conseguirá
+                            acessá‐los novamente é possuir backups atualizados.
+                            O pagamento do resgate não garante que você
+                            conseguirá restabelecer o acesso aos dados.
+                        </p>
+                    </section>
+                </article>
+
+                <article id="question-10" class="section flow card">
+                    <h2 class="card-title">
+                        10. Em aula, falamos sobre formas de ataques como
+                        Phishing e DDOS. Explique-os
+                    </h2>
+                </article>
+
+                <article id="question-11" class="section flow card">
+                    <h2 class="card-title">
+                        11. Explique unidade de alocação de arquivos.
+                    </h2>
+                </article>
+
+                <article id="question-12" class="section flow card">
+                    <h2 class="card-title">
+                        12. Diferencie Formatação Rápida, Formatação Completa e
+                        Formatação Zero Fill, como descrito em aula.
+                    </h2>
+                </article>
+
+                <article id="question-13" class="section flow card">
+                    <h2 class="card-title">
+                        13. Explique Tabela de alocação de arquivos, como
+                        descrito em aula.
+                    </h2>
+                </article>
+
+                <article id="question-14" class="section flow card">
+                    <h2 class="card-title">
+                        14. Explique duas formas de mapear os arquivos
+                        armazenados em disco e como é possível recuperá-los.
+                    </h2>
+                </article>
+
+                <article id="question-15" class="section flow card">
+                    <h2 class="card-title">
+                        15. Como se apresentam, fisicamente, os HDD e SSD?
+                    </h2>
+                </article>
+
+                <article id="question-16" class="section flow card">
+                    <h2 class="card-title">
+                        16. Explique a forma de o SSD armazenar os dados.
+                    </h2>
+                </article>
+
+                <article id="question-17" class="section flow card">
+                    <h2 class="card-title">
+                        17. Explique as principais desvantagens do SSD e do HDD.
+                    </h2>
+                </article>
+
+                <article id="question-18" class="section flow card">
+                    <h2 class="card-title">18. Porque SSD usam chips NAND?</h2>
+                </article>
+            </section>
+        </article>
+    </body>
+</html>
