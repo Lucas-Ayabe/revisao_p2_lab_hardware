@@ -148,6 +148,10 @@
                     font-size: 2rem;
                 }
 
+                .title.sm {
+                    font-size: 1.125rem;
+                }
+
                 .title.lg {
                     font-size: 3.5rem;
                 }
@@ -660,14 +664,6 @@
                             conseguirá restabelecer o acesso aos dados.
                         </p>
                     </section>
-
-                    <section class="subsection half-flow">
-                        <h2 class="title sm"></h2>
-                        <p></p>
-
-                        <h3 class="subtitle">Solução</h3>
-                        <p></p>
-                    </section>
                 </article>
 
                 <article id="question-10" class="section flow card">
@@ -675,12 +671,64 @@
                         10. Em aula, falamos sobre formas de ataques como
                         Phishing e DDOS. Explique-os
                     </h2>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">Phishing</h2>
+                        <p>
+                            O Phishing é uma tática onde se usa uma fachada que
+                            parece verdadeira com o intuito de enganar o alvo
+                            para que o mesmo revele informações confidenciais
+                            como senhas ou números de cartão de crédito.
+                        </p>
+                        <p>
+                            Em geral, são usados e-mails falsos se passando por
+                            bancos ou promoções, sites falsos como um login do
+                            Facebook porém com um endereço diferente e etc.
+                        </p>
+                    </section>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">DDOS</h2>
+                        <p>
+                            O Ataque de negação de serviço ou DDOS consiste em
+                            um computador mestre que controla vários outros
+                            chamados de escravos, e juntos eles fazem várias
+                            requisições para um mesmo servidor, que fica tão
+                            ocupado tentando atender a todas as requisições que
+                            acaba ficando indisponível para qualquer outra
+                            requisição.
+                        </p>
+                    </section>
                 </article>
 
                 <article id="question-11" class="section flow card">
                     <h2 class="card-title">
                         11. Explique unidade de alocação de arquivos.
                     </h2>
+
+                    <p>
+                        Na formatação do disco, o espaço livre é dividido em
+                        pedaços, de mesmo tamanho, denominado Unidade de
+                        Alocação.
+                    </p>
+
+                    <p>
+                        Em sistemas microsoft usam o termo cluster e nos linux o
+                        termo i-Node
+                    </p>
+
+                    <p>
+                        Uma unidade de alocação é
+                        <b
+                            >a menor porção lógica de espaço em disco que pode
+                            ser alocada para armazenar um arquivo</b
+                        >. Armazenar arquivos pequenos num sistema de arquivos
+                        com unidades de alocação grandes irá portanto
+                        desperdiçar espaço em disco; tal espaço desperdiçado é
+                        denominado "fragmentação interna", devido ao fato de
+                        termos um espaço que jamais será utilizado por outro
+                        arquivo distinto.
+                    </p>
                 </article>
 
                 <article id="question-12" class="section flow card">
@@ -688,6 +736,35 @@
                         12. Diferencie Formatação Rápida, Formatação Completa e
                         Formatação Zero Fill, como descrito em aula.
                     </h2>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">Formatação rápida</h2>
+                        <p>
+                            Apenas apaga a tabela de alocação de arquivos e os
+                            blocos gravados no disco vão sendo sobrescritos
+                            pelos novos
+                        </p>
+                    </section>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">Formatação completa</h2>
+                        <p>
+                            Apena apaga a tabela de alocação de arquivos e
+                            verifica os setores do disco verificando se existem
+                            erros, os blocos gravados no disco vão sendo
+                            sobrescritos pelos novos
+                        </p>
+                    </section>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">Formatação zero fill</h2>
+                        <p>
+                            Necessita de boot por aplicação desenvolvida pelo
+                            fabricante do disco rígido. Escreve “0” em todos os
+                            setores do disco, ou seja, tudo que existia no disco
+                            é sobrescrito por zero.
+                        </p>
+                    </section>
                 </article>
 
                 <article id="question-13" class="section flow card">
@@ -695,6 +772,21 @@
                         13. Explique Tabela de alocação de arquivos, como
                         descrito em aula.
                     </h2>
+
+                    <p>
+                        Tabela que contém a unidade de alocação inicial de cada
+                        arquivo, e partir desse endereço o sistema pode ir lendo
+                        os endereços das outras partes do arquivo, através de
+                        uma identificação contida no próprio arquivo, desta
+                        forma, podemos entender a tabela de alocação de arquivos
+                        como uma tabela que tem todos os pontos iniciais para
+                        cada arquivo do sistema e ela pode ser:
+                    </p>
+
+                    <ul class="list">
+                        <li>FAT (File Allocation Table)</li>
+                        <li>MFT (Master File Table) – Mais atual</li>
+                    </ul>
                 </article>
 
                 <article id="question-14" class="section flow card">
@@ -702,28 +794,99 @@
                         14. Explique duas formas de mapear os arquivos
                         armazenados em disco e como é possível recuperá-los.
                     </h2>
+
+                    <p>Existem duas formas de se armazenar arquivos:</p>
+
+                    <ul>
+                        <li>FAT</li>
+                        <li>MFT, sendo a mais utilizada atualmente.</li>
+                    </ul>
+
+                    <p>
+                        E quanto a forma de recuperação dos arquivos. Baseado na
+                        tabela de alocação de arquivos e pelos endereços nos
+                        próprios blocos de alocação. Como cada bloco mantém o
+                        endereçamento do próximo, mesmo que a tabela de alocação
+                        se perca é possível localizar o primeiro bloco de cada
+                        arquivo e rastrear todos os blocos subsequentes e
+                        remontar o arquivo.
+                    </p>
                 </article>
 
                 <article id="question-15" class="section flow card">
                     <h2 class="card-title">
                         15. Como se apresentam, fisicamente, os HDD e SSD?
                     </h2>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">HDD</h2>
+                        <p>
+                            Os hard disk drives são representados por discos
+                            móveis e um braço mecânico que utilizado para
+                            leitura e escrita de dados
+                        </p>
+                    </section>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">SSD</h2>
+                        <p>
+                            Os solid-state drives são representados por várias
+                            memórias flash e um chip controlador que gerencia as
+                            trocas de dados entre o computador e a memória
+                            flash.
+                        </p>
+                    </section>
                 </article>
 
                 <article id="question-16" class="section flow card">
                     <h2 class="card-title">
                         16. Explique a forma de o SSD armazenar os dados.
                     </h2>
+
+                    <p>
+                        Basicamente se tem um chip controlador que faz o acesso
+                        aos dados que são gravados de forma elétrica, dando
+                        muito mais performance, em uma matriz de chips de
+                        memórias flash do tipo NAND.
+                    </p>
                 </article>
 
                 <article id="question-17" class="section flow card">
                     <h2 class="card-title">
                         17. Explique as principais desvantagens do SSD e do HDD.
                     </h2>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">HDD</h2>
+                        <ul class="list">
+                            <li>Mais lento</li>
+                            <li>Mais frágil devido as partes móveis</li>
+                        </ul>
+                    </section>
+
+                    <section class="subsection half-flow">
+                        <h2 class="title sm">SSD</h2>
+                        <ul class="list">
+                            <li>É bem mais caro que o HDD</li>
+                            <li>
+                                A sua vida útil é menor, pois com o tempo, o
+                                floating gate vai perdendo sua capacidade de
+                                reter cargas.
+                            </li>
+                        </ul>
+                    </section>
                 </article>
 
                 <article id="question-18" class="section flow card">
                     <h2 class="card-title">18. Porque SSD usam chips NAND?</h2>
+                    <ul>
+                        <li>Menos custo por bit armazenado</li>
+                        <li>Mais capacidade e densidade em relação ao NOR</li>
+                        <li>Armazenamento de arquivos é fácil</li>
+                        <li>
+                            permite reter dados quando a energia for removida.
+                        </li>
+                    </ul>
                 </article>
             </section>
         </article>
