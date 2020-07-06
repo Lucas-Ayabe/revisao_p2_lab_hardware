@@ -194,8 +194,8 @@
                 color: rgb(13, 119, 206);
             }
 
-            .table tr {
-                border-bottom: 1px solid #ccc;
+            .table tbody tr {
+                border-top: 1px solid #ccc;
             }
 
             .table tbody tr:nth-child(odd) {
@@ -208,6 +208,16 @@
 
             .table td:first-of-type {
                 font-weight: 600;
+            }
+
+            .table tbody tr:last-child td:nth-child(1) {
+                border-radius: 0 0 0 6px;
+                overflow: hidden;
+            }
+
+            .table tbody tr:last-child td:last-child {
+                border-radius: 0 0 6px 0;
+                overflow: hidden;
             }
         </style>
     </head>
@@ -228,10 +238,394 @@
                         todo) do simulador de defeitos. (Recomendado fazer 2 ou
                         3 rodadas completas)
                     </h2>
+
                     <p>
-                        Bem como este item não é bem uma pergunta então em breve
-                        colocarei um mini-detonado do simulador.
+                        A seguir serão listados todos os erros com a sua
+                        possível solução.
                     </p>
+
+                    <div class="table-wrapper">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Sintomas</th>
+                                    <th>Solução</th>
+                                    <th>Informações adicionais</th>
+                                    <th>Problema aparente (hardware)</th>
+                                    <th>Problema aparente (software)</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        O computador trava ou reinicia sozinho
+                                        em qualquer momento, durante a
+                                        utilização de qualquer programa e às
+                                        vezes trava mesmo antes do boot.
+                                    </td>
+                                    <td>
+                                        Placa-Mãe
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Ao tentar ler ou gravar arquivos em
+                                        disquetes o Windows exibe uma mensagen
+                                        de erro de acesso ao disco
+                                    </td>
+                                    <td>
+                                        Drive de Disquete
+                                    </td>
+                                    <td>
+                                        Já foram utilizados vários disquetes
+                                        diferentes, inclusive disquetes novos,
+                                        mas para todos ocorre o mesmo erro.
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Mensagem de erro: "Erro de acesso ao
+                                        disquete"
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Durante a utilização do computador, ao
+                                        acessar alguns arquivos no HD o
+                                        computador trava durante alguns segundos
+                                        e volta a funcionar. Às vezes, ao tentar
+                                        acessar alguns dispositivos no HD o
+                                        Windows avisa que eles estão corrompidos
+                                        e não permite o acesso.
+                                    </td>
+                                    <td>
+                                        Disco rígido
+                                    </td>
+                                    <td>
+                                        Às vezes pode se ouvir uns estalos bem
+                                        altos que vem de dentro do computador.
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Mensagem de erro: "O arquivo que você
+                                        está tentando acessar pode estar
+                                        corrompido".
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        O computador trava ou reinicia sozinho
+                                        em qualquer momento, durante a
+                                        utilização de qualquer programa, mas
+                                        sempre depois do boot.
+                                    </td>
+                                    <td>
+                                        Reinstalação do sistema operacional
+                                    </td>
+                                    <td>
+                                        Defeito começou a ocontecer depois de
+                                        uma queda repentina de energia, enquanto
+                                        usuário utilizava o computador.
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Às vezes o computador não liga e
+                                        apresenta um bip longo seguido de três
+                                        bips curtos. Às vezes ele funciona
+                                        normalmente.
+                                    </td>
+                                    <td>
+                                        Pincel
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        Nenhum problema aparente. Nenhuma
+                                        mensagem de erro é exibida.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Apesar de não haver distorções nas
+                                        imagens, elas aparecem dentro do Windows
+                                        com uma definição muito pobre o poucas
+                                        cores.
+                                    </td>
+                                    <td>
+                                        Reinstalação dos drivers dos
+                                        dispositivos
+                                    </td>
+                                    <td>
+                                        Ao entrar na configuração da resolução
+                                        da tela do Windows, não é possível
+                                        configurar para um número maior de
+                                        cores, nem para uma resolução maior de
+                                        tela. Apenas aparece a opção de utilizar
+                                        a resolução 640x480 com 16 cores (4
+                                        bit).
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Nenhum sinal de vídeo aparece no
+                                        monitor.
+                                    </td>
+                                    <td>Monitor</td>
+                                    <td>
+                                        O computador liga normalmente e você
+                                        consegue ouvir o bip que indica sucesso
+                                        no autoteste. Além disso, parece que o
+                                        computador está carregando o SO
+                                        normalmente, porque você consegue ouvir
+                                        o som inicial de entrada do Windows.
+                                    </td>
+                                    <td></td>
+                                    <td>Nada aparece no monitor</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        O computador está muito lento, tanto
+                                        para ler ou gravar arquivos quanto para
+                                        executar programas, digitar textos,
+                                        acessar internet, etc. Alguns arquivos
+                                        do usuário sumiram. Às vezes trava.
+                                    </td>
+                                    <td>Verificação de vírus</td>
+                                    <td>
+                                        Defeito apareceu depois que o usuário
+                                        abriu um arquivo executável que um amigo
+                                        lhe enviou por email.
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        O computador tem um drive de disquete,
+                                        mas o SO não reconhece o drive. O drive
+                                        A:não aparece dentro do SO.
+                                    </td>
+                                    <td>Configuração do Setup</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        O computador trava ou reinicia sozinho
+                                        em qualquer momento, durante a
+                                        utilização de qualquer programa e às
+                                        vezes trava mesmo antes do boot.
+                                    </td>
+                                    <td>Memória Ram</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        O computador trava ou reinicia sozinho
+                                        em qualquer momento, durante a
+                                        utilização de qualquer programa e às
+                                        vezes trava mesmo antes do boot.
+                                    </td>
+                                    <td>Cooler do processador</td>
+                                    <td>
+                                        O travamento ocorre com mais frequência
+                                        depois que o computador está ligado por
+                                        algum tempo.
+                                    </td>
+                                    <td>
+                                        Aparentemente o cooler do processador
+                                        não está funcionando.
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        - Durante a utilização do computador, as
+                                        imagens perdem a definição.
+                                        <br />
+                                        - Às vezes aparecem barras verticais na
+                                        tela e cores estranhas.
+                                    </td>
+                                    <td>
+                                        Placa de Vídeo
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        O defeito acontece com mais frequência
+                                        quando o usuário utiliza programas que
+                                        utilizam mais os recursos de vídeo, como
+                                        jogos e programas de edição de imagens.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Logo ao ligar o computador o autoteste
+                                        (POST) exibe a mensagem "HDD Failure"
+                                        (Falha no HD). Após a mensagem o
+                                        computador suspende suas atividades, não
+                                        chegando nem mesmo a iniciar o boot.
+                                    </td>
+                                    <td>Pincel</td>
+                                    <td></td>
+                                    <td>
+                                        Aparentemente o cabo de dados que liga o
+                                        HD à placa mãe não está conectado
+                                        perfeitamente.
+                                    </td>
+                                    <td>Mensagem de erro: "HDD Failure"</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        O computador trava sempre durante a
+                                        execução de um determinado programa
+                                        aplicativo.
+                                    </td>
+                                    <td>Reinstalação do programa aplicativo</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        - Ao apertar o botão liga/desliga do
+                                        gabinete nada acontece.
+                                        <br />
+                                        - O computador não liga
+                                        <br />
+                                        - Nenhum LED do gabinete acende
+                                    </td>
+                                    <td>Fonte de Alimentação</td>
+                                    <td>
+                                        Energia fornecida na tomada está normal
+                                    </td>
+                                    <td>
+                                        Apesar da fonte de alimentação estar
+                                        conectada à energia e conectada à
+                                        placa-mãe, o LED que fica na placa-mãe e
+                                        indica se há energia está apagado.
+                                    </td>
+                                    <td>
+                                        Nada aparece no monitor, pois o
+                                        computador não está ligando.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Logo ao ligar o computador o autoteste
+                                        (POST) exibe a mensagem "HDD Failure"
+                                        (Falha no HD). Após a mensagem o
+                                        computador suspende suas atividades, não
+                                        chegando nem mesmo a iniciar o boot
+                                    </td>
+                                    <td>Disco rígido</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Mensagem de erro: "HDD Failure"</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Ao tentar carregar o sistema operacional
+                                        o computador apresenta a mensagem "Disco
+                                        sem sistema ou defeituoso".
+                                    </td>
+                                    <td>Reinstalação do sistema operacional</td>
+                                    <td>
+                                        O computador estava funcionando
+                                        normalmente quando de repente parou de
+                                        carregar o SO e começou a apresentar a
+                                        mensagem de erro.
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Mensagem de erro: "Disco sem Sistema ou
+                                        defeituoso"
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        O computador trava ou reinicia sozinho
+                                        em qualquer momento, durante a
+                                        utilização de qualquer programa e às
+                                        vezes trava mesmo antes do boot.
+                                    </td>
+                                    <td>Processador</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Às vezes o computador não liga e
+                                        apresenta bips longos e espaçados.
+                                        Quando liga às vezes trava na execução
+                                        de qualquer programa e até mesmo antes
+                                        do boot.
+                                    </td>
+                                    <td>Pincel</td>
+                                    <td>
+                                        Problema começou a acontecer depois que
+                                        o computador foi transportado de uma
+                                        casa para outra no porta-malas de um
+                                        carro.
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Ao tentar ler arquivos em CD-ROMs o
+                                        Windows exibe uma mensagem de erro de
+                                        leitura em alguns arquivos e às vezes
+                                        erro de acesso total ao CD-ROM.
+                                    </td>
+                                    <td>
+                                        Drive de CD-ROM
+                                    </td>
+                                    <td>
+                                        Já foram utilizados vários CD-ROMs
+                                        diferentes, inclusive CD-ROMs novos, mas
+                                        para todos ocorre o mesmo erro.
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Mensagem de erro: "Erro de acesso ao
+                                        CD-ROM"
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </article>
 
                 <article id="question-02" class="section flow card">
